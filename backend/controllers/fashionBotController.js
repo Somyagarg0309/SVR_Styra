@@ -21,7 +21,7 @@ async function fashionBotHandler(req, res) {
 
     const systemContent = `
 You are an expert fashion stylist. User provides a dress description and asks for advice.
-Based on dress description, suggest jewelry, makeup, and accessories. Keep it practical and <= 100 words.
+Based on dress description, suggest jewelry, makeup, and accessories. Keep it practical and <= 100 words and in pragraph form.
 Dress Description: ${dressDescription || "null"}
 `;
     const userContent = `User Question: ${prompt}`;
