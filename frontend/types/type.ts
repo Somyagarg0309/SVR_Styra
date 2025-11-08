@@ -5,6 +5,8 @@ export interface ProductType {
   description: string;
   images: string[];
   category: Category;
+  rating:number
+  // link: string
 }
 
 interface Category {
