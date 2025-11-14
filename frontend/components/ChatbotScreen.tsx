@@ -29,7 +29,7 @@ const ChatbotScreen = ({ botId = 'fashionbot' }: Props) => {
   const flatListRef = useRef<FlatList>(null);
   const router = useRouter();
 
-  const BACKEND_URL = 'https://svr-styra.onrender.com/fashionbot';
+  const BACKEND_URL = 'xyz/fashionbot';
 
   const sendMessage = async () => {
     if (!inputText.trim() || loading) return;

@@ -27,7 +27,7 @@ const ExploreScreen = () => {
       setLoading(true);
       setError('');
 
-      const response = await axios.get(`https://svr-styra.onrender.com/searchproduct?q=${query}`);
+      const response = await axios.get(`xyz/searchproduct?q=${query}`);
       const fetchedProducts = response.data?.products || [];
 
       setProducts(fetchedProducts);
