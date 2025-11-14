@@ -18,7 +18,6 @@ import { Colors } from '@/constants/Colors';
 import { Stack } from 'expo-router';
 import { useRouter } from 'expo-router';
 
-
 type Props = {
   botId?: string;
 };
@@ -30,8 +29,7 @@ const ChatbotScreen = ({ botId = 'fashionbot' }: Props) => {
   const flatListRef = useRef<FlatList>(null);
   const router = useRouter();
 
-
-  const BACKEND_URL = 'http://192.168.1.5:3000/fashionbot';
+  const BACKEND_URL = 'https://svr-styra.onrender.com/fashionbot';
 
   const sendMessage = async () => {
     if (!inputText.trim() || loading) return;
@@ -42,15 +40,30 @@ const ChatbotScreen = ({ botId = 'fashionbot' }: Props) => {
     setLoading(true);
 
     try {
-      const response = await axios.post(BACKEND_URL, {
-        prompt: userMessage,
-        botId,
-      });
+      const response = await axios.post(
+        BACKEND_URL,
+        {
+          prompt: userMessage,
+          botId,
+        },
+        {
+          timeout: 60000, // ✅ 60-second timeout to handle Render cold starts
+        }
+      );
 
       const botReply = response.data.advice || 'No response';
       setMessages(prev => [...prev, { text: botReply, sender: 'bot' }]);
-    } catch (err) {
-      setMessages(prev => [...prev, { text: 'Error connecting to bot', sender: 'bot' }]);
+    } catch (err: any) {
+      console.log("REQUEST ERROR:", err?.message);
+      console.log("FULL ERROR:", err);
+
+      setMessages(prev => [
+        ...prev,
+        {
+          text: 'Error connecting to bot: ' + (err?.message || 'Unknown error'),
+          sender: 'bot',
+        },
+      ]);
     } finally {
       setLoading(false);
     }
@@ -66,21 +79,20 @@ const ChatbotScreen = ({ botId = 'fashionbot' }: Props) => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: Colors.background }}>
       <Stack.Screen
-  options={{
-    title: 'FashionBot',
-    headerLeft: () => (
-      <TouchableOpacity
-        style={{ marginLeft: 15 }}
-        onPress={() => router.back()} // navigate back
-      >
-        <Ionicons name="close" size={24} color={Colors.primary} />
-      </TouchableOpacity>
-    ),
-    headerTitleAlign: 'center',
-    headerRight: () => null, // remove any right button (cross)
-  }}
-/>
-
+        options={{
+          title: 'FashionBot',
+          headerLeft: () => (
+            <TouchableOpacity
+              style={{ marginLeft: 15 }}
+              onPress={() => router.back()}
+            >
+              <Ionicons name="close" size={24} color={Colors.primary} />
+            </TouchableOpacity>
+          ),
+          headerTitleAlign: 'center',
+          headerRight: () => null,
+        }}
+      />
 
       <KeyboardAvoidingView
         style={{ flex: 1 }}
@@ -97,7 +109,12 @@ const ChatbotScreen = ({ botId = 'fashionbot' }: Props) => {
                 item.sender === 'user' ? styles.userBubble : styles.botBubble,
               ]}
             >
-              <Text style={[item.sender === 'user' ? styles.userText : styles.botText, { fontSize: 16 }]}>
+              <Text
+                style={[
+                  item.sender === 'user' ? styles.userText : styles.botText,
+                  { fontSize: 16 },
+                ]}
+              >
                 {item.text}
               </Text>
             </View>
@@ -108,7 +125,9 @@ const ChatbotScreen = ({ botId = 'fashionbot' }: Props) => {
         {loading && (
           <View style={{ padding: 5, alignItems: 'center' }}>
             <ActivityIndicator size="small" color={Colors.primary} />
-            <Text style={{ color: Colors.black, marginTop: 3, fontSize: 14 }}>Bot is typing...</Text>
+            <Text style={{ color: Colors.black, marginTop: 3, fontSize: 14 }}>
+              Bot is typing...
+            </Text>
           </View>
         )}
 
