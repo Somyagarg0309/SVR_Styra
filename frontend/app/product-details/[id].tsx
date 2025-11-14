@@ -10,6 +10,7 @@ import {useHeaderHeight} from '@react-navigation/elements'
 import Animated, { FadeInDown } from 'react-native-reanimated';
 import { useCartStore } from "@/store/useCartStore";
 import { useRouter } from "expo-router";
+import { Linking } from 'react-native';
 
 
 
@@ -100,9 +101,16 @@ const headerHeight= useHeaderHeight();
   </Text>
 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>AI Try On</Text>
-                </TouchableOpacity>
+                <TouchableOpacity
+  style={styles.button}
+  onPress={() => {
+    if (product && product.link) {
+      Linking.openURL(product.link); // open product link in browser
+    }
+  }}
+>
+  <Text style={styles.buttonText}>Buy Now</Text>
+</TouchableOpacity>
              </View>
     </View>
     </>

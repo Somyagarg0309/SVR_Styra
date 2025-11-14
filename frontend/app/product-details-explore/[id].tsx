@@ -6,11 +6,16 @@ import { Colors } from '@/constants/Colors';
 import { useHeaderHeight } from '@react-navigation/elements';
 import { ProductType } from '@/types/type';
 import ImageSlider from '@/components/ImageSlider';
+import { useCartStore } from "@/store/useCartStore";
+import { Linking } from 'react-native';
 
 const ProductDetailsExplore = () => {
   const { product } = useLocalSearchParams<{ product?: string }>();
   const [productData, setProductData] = useState<ProductType | null>(null);
   const headerHeight = useHeaderHeight();
+  const addToCart = useCartStore((state) => state.addToCart);
+  const removeFromCart = useCartStore((state) => state.removeFromCart);
+  const cart = useCartStore((state) => state.cart);
 
   useEffect(() => {
     if (product) {
@@ -30,6 +35,18 @@ const ProductDetailsExplore = () => {
     );
   }
 
+  const isInCart = cart.some((item) => item.id === productData.id);
+
+  const handleToggleCart = () => {
+    if (productData) {
+      if (isInCart) {
+        removeFromCart(productData.id);
+      } else {
+        addToCart(productData);
+      }
+    }
+  };
+
   return (
     <>
       <Stack.Screen
@@ -43,7 +60,6 @@ const ProductDetailsExplore = () => {
           contentContainerStyle={{ paddingBottom: 120 }}
           style={{ marginTop: headerHeight + 5 }}
         >
-          {/* Use ImageSlider if available, else fallback to single image */}
           {productData.images && productData.images.length > 0 ? (
             <ImageSlider imageList={productData.images} />
           ) : (
@@ -53,7 +69,6 @@ const ProductDetailsExplore = () => {
             />
           )}
 
-          {/* Product Info */}
           <View style={styles.container}>
             {/* Rating + Heart */}
             <View style={styles.ratingWrapper}>
@@ -61,8 +76,12 @@ const ProductDetailsExplore = () => {
                 <Ionicons name="star" color={'#D4AF37'} size={18} />
                 <Text style={styles.rating}>{productData.rating}</Text>
               </View>
-              <TouchableOpacity>
-                <Ionicons name="heart-outline" size={20} color={Colors.black} />
+              <TouchableOpacity onPress={handleToggleCart}>
+                <Ionicons
+                  name={isInCart ? 'heart' : 'heart-outline'}
+                  size={20}
+                  color={isInCart ? 'red' : Colors.black}
+                />
               </TouchableOpacity>
             </View>
 
@@ -86,13 +105,23 @@ const ProductDetailsExplore = () => {
               styles.button,
               { backgroundColor: Colors.white, borderColor: Colors.primary, borderWidth: 1 },
             ]}
+            onPress={handleToggleCart} // add/remove from cart
           >
             <Ionicons name="cart-outline" size={20} color={Colors.primary} />
-            <Text style={[styles.buttonText, { color: Colors.primary }]}>Add to Cart</Text>
+            <Text style={[styles.buttonText, { color: Colors.primary }]}>
+              {isInCart ? 'Added' : 'Add to Cart'}
+            </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>AI Try On</Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => {
+              if (productData?.link) {
+                Linking.openURL(productData.link); // Buy Now / external link
+              }
+            }}
+          >
+            <Text style={styles.buttonText}>Buy Now</Text>
           </TouchableOpacity>
         </View>
       </View>
