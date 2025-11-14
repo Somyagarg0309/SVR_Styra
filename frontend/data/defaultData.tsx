@@ -16,6 +16,8 @@ export const defaultData: Record<string, ProductType[]> = {
         image: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSzN3JZZ2Uv6rpQ5nlEbEgF0CstWPjD36ogAMbX04MBiHi0twM',
       },
       rating:4,
+      link:'https://www.meesho.com/casual-polyester-blend-ribbed-collar-v-neck-regular-long-sleeves-stylish-coffee-top-20inches/p/71ldyd?utm_source=google&utm_medium=cpc&utm_term=gmc&srsltid=AfmBOoq6tD4lOlAfuI-xTAqDjy4LIt5L_Sv1GQGb5fssabN_jAM4XZ0afqg%22'
+
     },
     {
       id: 2,
@@ -34,6 +36,7 @@ export const defaultData: Record<string, ProductType[]> = {
           'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTjZ5BZgunqaRHVwQVMlv06ND5E-WUC5EOT-VUiffl9FJUIJYY0Y8P1FfEyycD51wxc2JoqQTBM2eI_7HOubfcPfe6zx7w0eFVzOndzsgG_F2I_LDz6zvvgqQ',
       },
       rating:3.7,
+      link:'http://www.myntra.com/Tops/Slenor/Slenor-Shirt-Collar-Short-Sleeves-Crop-Shirt-Style-Top/28195052/buy'
     },
     {
       id: 3,
@@ -52,6 +55,7 @@ export const defaultData: Record<string, ProductType[]> = {
           'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR9hpYCz-xedM902gXy4CzKSev93nKZ-1XrbIDFqw_JkrfqwlNa1CFxBVBaucJZWjLgv-R4i1AFZGqXbnpNkfK03indpMROtkKJ9xiXE1kw',
       },
       rating:4.5,
+      link:'https://www.amazon.in/PERFETTE-WOLLO-Black-Sleeves-Regular/dp/B0DSJHMDRL?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1V7QZ6QKXPQ0I%22'
     },
     {
       id: 4,
@@ -70,6 +74,7 @@ export const defaultData: Record<string, ProductType[]> = {
           'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTQ3V0zuwgrAFkjxY-qrQoIxQMhTIyAAWGCDT-jDngawD7gGb-wLsHfGe-YcU-9RXGelZFzvl4',
       },
       rating:3.5,
+      link:'https://www.zepto.com/pn/style-quotient-women-peach-self-design-lace-regular-smart-casual-top-l-ss23sqsikkim-peach/pvid/e46a7d8f-4286-44c7-81aa-d7f703227f84?srsltid=AfmBOoqHBqVDwv1UNDihZqPCe7mUm3mMbE12Tw8LBck2r5YqbKqX7oGoVsk'
     },
     {
       id: 5,
@@ -87,6 +92,7 @@ export const defaultData: Record<string, ProductType[]> = {
           'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS2iBhwgv_AHz9z2YxIkf7ha6clfbzrGhFbk4saldeP1h_vUB3WfxK1zWNIMQ',
       },
       rating:4.2,
+      link:'http://www.myntra.com/Tops/KALINI/KALINI-Floral-Print-Mandarin-Collar-Top/30259529/buy'
     },
   ],
   Sweaters: [
@@ -106,6 +112,7 @@ export const defaultData: Record<string, ProductType[]> = {
         image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSbtMR9lL2QYHBg9cWYwFchL6xIWkykDkTm-7ITJhYBSk62Yjl1NLtoOJ5GOiC4evNQdtFk3RAG4-JGz1AMlLLSG-0V3HWdzw5xsfgq8q5zOc1sRHcCkqYi",
       },
       rating:4.3,
+      link:'https://www.fugazee.com/products/sky-blue-floral-oversized-sweater?variant=39955918487639%22'
     },
     {
       id: 7,
@@ -122,6 +129,7 @@ export const defaultData: Record<string, ProductType[]> = {
         image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTZ8Abm3xfj-pc-e0LQ6gfk1m4xux_qbu5uFRLdDOY2yiupQD3jCM_bkNMfyb2_AhrdVDgCpSY",
       },
       rating:4,
+      link:'https://www.amazon.in/eWools-Womens-Knited-Sleeve-Cardigan/dp/B0BL54W1G6?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A14OT3JMIRML7S%22'
     },
     {
       id: 8,
@@ -139,6 +147,7 @@ export const defaultData: Record<string, ProductType[]> = {
         image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTxgry6OS9qOHMY-cne2Ot_A69dMIR4tx4-ARSb33rlM6AUUSsHE2wMjlJtH5YVNTlaRtJjIce8igrqeyiqlVEhubhlrLQzlNlAE9oikOy_giwssrSY_x4yGw",
       },
       rating:3.9,
+      link:'http://www.myntra.com/Sweaters/Mast+%26+Harbour/Mast--Harbour-Acrylic-Cable-Knit-Pullover/22665382/buy'
     },
     {
       id: 9,
@@ -155,6 +164,7 @@ export const defaultData: Record<string, ProductType[]> = {
         image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTn_73xzwaPFoZTHL-JQIu7E4j0rX2ePSzzAjsFUcvlmsyri-rVys15FXF0QQ5V5kk1IWJAd8yE88IFrfKjcqCQNn-Q-uRgwxIjRyH4AcxsOloFysF6DOzvGA",
       },
       rating:3.4,
+      link:'https://allensolly.abfrl.in/p/women-beige-textured-round-neck-casual-sweater-39828217.html?size=XS%22'
     },
     
     {
@@ -172,6 +182,7 @@ export const defaultData: Record<string, ProductType[]> = {
         image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQcek2Vf6vvODyDWLE4Yl_vgzv4CQZAis8x1AlaD1-6OUqlznS3d2ib925SdTs",
       },
       rating:4.1,
+      link:'https://www.thesouledstore.com/product/solids-pebble-grey-mens-oversized-pullover?nsbp=true&srsltid=AfmBOooUcACZwWAqe-3WDoRGeYcUoVhsO1e-vpMiEswdKpByV02y85tIqeg%22'
     },
   ],
 
@@ -193,6 +204,7 @@ export const defaultData: Record<string, ProductType[]> = {
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRytfOa8EXbUuK7k5XH11m6fgA3JdTFKxZBYg&s',
       },
       rating:3,
+      link:'https://www.amazon.in/Levis-Mens-Jeans-18298-1246_Light-Indigo_32/dp/B09Z77D2KG?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1WYWER0W24N8S%22'
     },
     {
       id: 12,
@@ -211,6 +223,7 @@ export const defaultData: Record<string, ProductType[]> = {
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRytfOa8EXbUuK7k5XH11m6fgA3JdTFKxZBYg&s',
       },
       rating:3.4,
+      link:'https://www.marksandspencer.in/slim-fit-360-flex-stretch-jeans/p/000000060702751021.html?srsltid=AfmBOopZwR6U6l_AVRO1-cokF_PdL7CsuPSCi2zTE_dW7wnCaNbPGoaQWaM%22'
     },
     {
       id: 13,
@@ -229,6 +242,7 @@ export const defaultData: Record<string, ProductType[]> = {
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRytfOa8EXbUuK7k5XH11m6fgA3JdTFKxZBYg&s',
       },
       rating:4.6,
+      link:'https://offduty.in/products/blue-drift-bootcut-jeans?variant=41798574473313&country=IN&currency=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOoqxq5us_tvTOjk1DM7LjucmDmhKQ3Rek_ptCkrr74hrAypBgj8eZ5s%22'
     },
     {
       id: 14,
@@ -246,6 +260,7 @@ export const defaultData: Record<string, ProductType[]> = {
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRytfOa8EXbUuK7k5XH11m6fgA3JdTFKxZBYg&s',
       },
       rating:4,
+      link:'https://www.pepejeans.in/men-blue-mid-rise-straight-fit-stretchable-jeans/8905875500599.html?srsltid=AfmBOooW168PMEN_dBk4ZF_j5wn_Wi3dENDg-S6iTtvy3HbdvNm-voPzRFo%22'
     },
     {
       id: 15,
@@ -263,6 +278,7 @@ export const defaultData: Record<string, ProductType[]> = {
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRytfOa8EXbUuK7k5XH11m6fgA3JdTFKxZBYg&s',
       },
       rating:3.4,
+      link:'http://www.myntra.com/Jeans/AD+By+Arvind/AD-By-Arvind-Men-Slim-Fit-Light-Fade-Jeans/32993392/buy'
     },
   ],
   
@@ -283,8 +299,8 @@ export const defaultData: Record<string, ProductType[]> = {
         image:
           'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTiDsUuj7WwcbbUq-rG8HbuHEpe3DvVz_aCdGI-9qTLWf87V5167RceQyTPkWocIuXj0miMdY1cbFFTO7h-LtWIinZHeV6EH70mRnTFDt9-',
       },
-      // link: 'http://www.myntra.com/Sarees/Saree+mall/Saree-Mall-Teal-blue-Pure-Chiffon--Embellished-Party-Wear-Saree-with-Matching-Blouse/30446161/buy',
       rating:4.4,
+      link: 'http://www.myntra.com/Sarees/Saree+mall/Saree-Mall-Teal-blue-Pure-Chiffon--Embellished-Party-Wear-Saree-with-Matching-Blouse/30446161/buy'
     },
     {
       id: 17,
@@ -302,8 +318,8 @@ export const defaultData: Record<string, ProductType[]> = {
         image:
           'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRcNQhexLfLXHN-AV_yYGNfR5nDU-_dqsOWD2kkLdqKOm1x-WU8zF4yVfI5DA',
       },
-      // link: 'https://www.amazon.in/SHOPAZ-Minute-Readymade-Stitched-Unstitched/dp/B0CNXZPZWS?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=ALH6WZSTQIAUS',
       rating:2.9,
+       link: 'https://www.amazon.in/SHOPAZ-Minute-Readymade-Stitched-Unstitched/dp/B0CNXZPZWS?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=ALH6WZSTQIAUS',
     },
     {
       id: 18,
@@ -321,8 +337,8 @@ export const defaultData: Record<string, ProductType[]> = {
         image:
           'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQEVjThrsM7HsT1BPpMqRBLVhDK7b0WJiaNa5C0_vq0R77V6W5MI0RwWYDCzwZHuIhT06_Ivkq8GJFc2UNqZ0K7BZffpEnB-UD2W5-Mjeg',
       },
-      // link: 'https://www.vastranand.in/products/sky-blue-satin-georgette-saree?variant=40797128491089&country=IN&currency=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic',
       rating:4,
+      link: 'https://www.vastranand.in/products/sky-blue-satin-georgette-saree?variant=40797128491089&country=IN&currency=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic',
     },
     {
       id: 19,
@@ -340,8 +356,9 @@ export const defaultData: Record<string, ProductType[]> = {
         image:
           'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSNEc6FLxGTFjOvveHurnPRlb4eu0fhT4ZluuAfI8ZJEy5jPtDWiAYxKkILFxSx41vEznyIhCsNBIXkrz1aaTZsHLel3e0vRy2dFkbsfSRtyjgFF4C0tVL8',
       },
-      // link: 'http://www.myntra.com/Sarees/Anouk/Anouk-Embellished-Sequinned-Tissue-Designer-Saree/33332604/buy',
       rating:4.9,
+      link: 'http://www.myntra.com/Sarees/Anouk/Anouk-Embellished-Sequinned-Tissue-Designer-Saree/33332604/buy',
+      
     },
     {
       id: 20,
@@ -359,8 +376,9 @@ export const defaultData: Record<string, ProductType[]> = {
         image:
           'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRiZbDE086KTYEqKzH561HjptwEzvUHmcfoweKZCL90geBAXmw6rEoIbZqKjOPB5_tltWiVxSIySvKBVnSv5a0uKZT0ugeI5bkBhslTbmiE',
       },
-      // link: 'https://vastrang.in/products/new-beautiful-wedding-wear-pink-color-two-tone-soft-banarasi-tissue-silk-bollywood-style-crushed-sarees?srsltid=AfmBOoqVckjLwOH-NIQRZLgMEBKURJvlU0ukb6gTaG9YL88y1kADkoSF6Ko',
       rating:4.6,
+      link: 'https://vastrang.in/products/new-beautiful-wedding-wear-pink-color-two-tone-soft-banarasi-tissue-silk-bollywood-style-crushed-sarees?srsltid=AfmBOoqVckjLwOH-NIQRZLgMEBKURJvlU0ukb6gTaG9YL88y1kADkoSF6Ko',
+      
     },
   ],
   Suits: [
@@ -382,8 +400,9 @@ export const defaultData: Record<string, ProductType[]> = {
         image:
           'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQfGd1RqExI7wtLSe9dVevJ09fj67jMMQrKIBFBi6PyRRv3pXT5JtHJGu1dOad-jnOyjKUyuq43',
       },
-      // link: 'https://www.amazon.in/Libas-Womens-Georgette-Kurta-48085_Black/dp/B0D73GRZ3W',
       rating:4,
+      link: 'https://www.amazon.in/Libas-Womens-Georgette-Kurta-48085_Black/dp/B0D73GRZ3W',
+      
     },
     {
       id: 22,
@@ -402,8 +421,9 @@ export const defaultData: Record<string, ProductType[]> = {
         image:
           'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ6wlHvxgK1llIRs4bRiLkiqG4zuWEvZU27Onxlur5jf3Iwj3UmtOyBM52cbpCdlvkgX7krzc0f6skvSTD8N4-rfvpbaj5m5KGBF_xu3Ec',
       },
-      // link: 'https://www.myntra.com/Kurta-Sets/Libas/Libas-Ethnic-Motifs-Woven-Design-Regular-Kurta-with-Trousers--Dupatta/24331010/buy',
       rating:4.2,
+      link: 'https://www.myntra.com/Kurta-Sets/Libas/Libas-Ethnic-Motifs-Woven-Design-Regular-Kurta-with-Trousers--Dupatta/24331010/buy',
+      
     },
     {
       id: 23,
@@ -421,8 +441,9 @@ export const defaultData: Record<string, ProductType[]> = {
         image:
           'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ-lV6B91mo4aqxEHzFhUL3t6WVpLR_lABnpeOem47Dy3wVlcQ',
       },
-      // link: 'https://www.tatacliq.com/biba-pink-embroidered-kurta-pant-set-with-dupatta/p-mp000000023431740',
       rating:3.9,
+      link: 'https://www.tatacliq.com/biba-pink-embroidered-kurta-pant-set-with-dupatta/p-mp000000023431740',
+      
     },
     {
       id: 24,
@@ -440,8 +461,9 @@ export const defaultData: Record<string, ProductType[]> = {
         image:
           'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSO6I9vfEPUoMEzgfGGG72HQjGlw7NUAJDU9dNf2S5-ET4bzM9tTaTSJV82Cvd493LWxSrMXhdBPn02JhoAS03GoWQi6G3E',
       },
-      // link: 'https://www.aachho.com/products/nikhaar-mustard-jacquard-suit-set',
       rating:4.3,
+      link: 'https://www.aachho.com/products/nikhaar-mustard-jacquard-suit-set',
+      
     },
     
   ],

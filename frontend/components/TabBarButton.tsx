@@ -2,6 +2,8 @@ import { StyleSheet, Text, View , TouchableOpacity, Pressable} from 'react-nativ
 import React from 'react'
 import { icon } from '@/constants/Icons';
 import { Colors } from '@/constants/Colors';
+import { useCartStore } from '@/store/useCartStore';
+
 
 type Props = {
    onPress:Function;
@@ -13,6 +15,8 @@ type Props = {
 
 const TabBarButton = (props: Props) => {
     const {onPress,onLongPress,isFocused,routeName,label}=props
+    const cartCount = useCartStore((state) => state.cart.length);
+
   return (
     <Pressable 
                 onPress={onPress}
@@ -20,12 +24,12 @@ const TabBarButton = (props: Props) => {
                 style={styles.tabbarBtn}
               >
                 {/* Cart badge is here.... */}
-                {routeName=='cart' && (
-                    <View style={styles.badgeWrapper}>
-                    <Text style={styles.badgeText}>3</Text>
-                </View>
+                {routeName === 'cart' && cartCount > 0 && (
+  <View style={styles.badgeWrapper}>
+    <Text style={styles.badgeText}>{cartCount}</Text>
+  </View>
+)}
 
-                )}
                 
                 {icon[routeName]({
                     color:isFocused?Colors.primary:Colors.black,

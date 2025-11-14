@@ -6,7 +6,7 @@ export interface ProductType {
   images: string[];
   category: Category;
   rating:number
-  // link: string
+  link: string
 }
 
 interface Category {
@@ -27,6 +27,7 @@ export interface CartItemType {
   price: number;
   quantity: number;
   image: string;
+  link:string
 }
 
 export interface NotificationType {

@@ -31,7 +31,7 @@ const ChatbotScreen = ({ botId = 'fashionbot' }: Props) => {
   const router = useRouter();
 
 
-  const BACKEND_URL = 'http://192.168.0.101:3000/fashionbot';
+  const BACKEND_URL = 'http://192.168.1.5:3000/fashionbot';
 
   const sendMessage = async () => {
     if (!inputText.trim() || loading) return;

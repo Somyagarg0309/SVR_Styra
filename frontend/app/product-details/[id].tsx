@@ -8,6 +8,11 @@ import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '@/constants/Colors';
 import {useHeaderHeight} from '@react-navigation/elements'
 import Animated, { FadeInDown } from 'react-native-reanimated';
+import { useCartStore } from "@/store/useCartStore";
+import { useRouter } from "expo-router";
+
+
+
 
 
 
@@ -15,9 +20,14 @@ type Props = {}
 
 const ProductDetails = (props: Props) => {
     const {id} =useLocalSearchParams();
+    const addToCart = useCartStore((state) => state.addToCart);
+    const router = useRouter();
+
     const [product, setProduct] = useState<ProductType | null>(null);
     const getProductDetails = async() =>{
     const productId = Number(id); // convert string to number
+  
+
 
     for (const category in defaultData) {
       const found = defaultData[category].find((item) => item.id === productId);
@@ -72,10 +82,23 @@ const headerHeight= useHeaderHeight();
              </View>)}
              </ScrollView>
              <View style={styles.buttonWrapper}>
-                <TouchableOpacity style={[styles.button, {backgroundColor: Colors.white, borderColor:Colors.primary, borderWidth:1}]}>
-                    <Ionicons name='cart-outline' size={20} color={Colors.primary}/>
-                    <Text style={[styles.buttonText,{color:Colors.primary}]}>Add to Cart</Text>
-                </TouchableOpacity>
+                <TouchableOpacity
+  style={[
+    styles.button,
+    { backgroundColor: Colors.white, borderColor: Colors.primary, borderWidth: 1 },
+  ]}
+  onPress={() => {
+    if (product) {
+      addToCart(product);
+    //   router.push("/(tabs)/cart"); // navigate to cart
+    }
+  }}
+>
+  <Ionicons name="cart-outline" size={20} color={Colors.primary} />
+  <Text style={[styles.buttonText, { color: Colors.primary }]}>
+    Add to Cart
+  </Text>
+</TouchableOpacity>
 
                 <TouchableOpacity style={styles.button}>
                     <Text style={styles.buttonText}>AI Try On</Text>

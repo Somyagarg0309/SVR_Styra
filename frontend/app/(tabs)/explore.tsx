@@ -27,7 +27,7 @@ const ExploreScreen = () => {
       setLoading(true);
       setError('');
 
-      const response = await axios.get(`http://192.168.0.101:3000/searchproduct?q=${query}`);
+      const response = await axios.get(`http://192.168.1.5:3000/searchproduct?q=${query}`);
       const fetchedProducts = response.data?.products || [];
 
       setProducts(fetchedProducts);
@@ -67,7 +67,7 @@ const ExploreScreen = () => {
           <Text style={styles.noDataText}>
             {query
               ? `No products found for “${query}”.`
-              : 'No products available.'}
+              : ''}
           </Text>
           {renderQuote()}
         </View>
