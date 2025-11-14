@@ -1,4 +1,5 @@
 // /components/ChatbotScreen.tsx
+import { BACKEND_URL } from '@env';
 import React, { useState, useRef, useEffect } from 'react';
 import {
   SafeAreaView,
@@ -29,8 +30,7 @@ const ChatbotScreen = ({ botId = 'fashionbot' }: Props) => {
   const flatListRef = useRef<FlatList>(null);
   const router = useRouter();
 
-  const BACKEND_URL = 'xyz/fashionbot';
-
+  const url=`${BACKEND_URL}/fashionbot`;
   const sendMessage = async () => {
     if (!inputText.trim() || loading) return;
 
@@ -41,7 +41,7 @@ const ChatbotScreen = ({ botId = 'fashionbot' }: Props) => {
 
     try {
       const response = await axios.post(
-        BACKEND_URL,
+        url,
         {
           prompt: userMessage,
           botId,

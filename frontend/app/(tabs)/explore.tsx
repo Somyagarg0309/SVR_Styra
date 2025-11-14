@@ -5,6 +5,7 @@ import axios from 'axios';
 import { Colors } from '@/constants/Colors';
 import ProductExplore from '@/components/ProductExplore';
 import { ProductType } from '@/types/type';
+import { BACKEND_URL } from '@env';
 
 const ExploreScreen = () => {
   const { query } = useLocalSearchParams<{ query?: string }>();
@@ -27,7 +28,7 @@ const ExploreScreen = () => {
       setLoading(true);
       setError('');
 
-      const response = await axios.get(`xyz/searchproduct?q=${query}`);
+      const response = await axios.get(`${BACKEND_URL}/searchproduct?q=${query}`);
       const fetchedProducts = response.data?.products || [];
 
       setProducts(fetchedProducts);
