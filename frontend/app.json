@@ -6,6 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
+    "platforms": ["ios", "android", "web"],
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
@@ -13,13 +14,15 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier":"com.anonymous.expoecommereceappstarter"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package":"com.anonymous.expoecommereceappstarter"
     },
     "web": {
       "bundler": "metro",
@@ -31,6 +34,9 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "BACKEND_URL": "http://localhost:3000"
     }
   }
 }

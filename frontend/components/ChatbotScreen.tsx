@@ -1,5 +1,5 @@
-// /components/ChatbotScreen.tsx
-import { BACKEND_URL } from '@env';
+// // /components/ChatbotScreen.tsx
+// import { BACKEND_URL } from '@env';
 import React, { useState, useRef, useEffect } from 'react';
 import {
   SafeAreaView,
@@ -30,7 +30,7 @@ const ChatbotScreen = ({ botId = 'fashionbot' }: Props) => {
   const flatListRef = useRef<FlatList>(null);
   const router = useRouter();
 
-  const url=`${BACKEND_URL}/fashionbot`;
+  const url=`http://your device ip:3000/fashionbot`;
   const sendMessage = async () => {
     if (!inputText.trim() || loading) return;
 

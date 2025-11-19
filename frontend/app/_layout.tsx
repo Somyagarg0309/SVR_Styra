@@ -4,6 +4,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import Toast from 'react-native-toast-message';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -30,6 +31,7 @@ export default function RootLayout() {
         <Stack.Screen name="signin" options={{ presentation: 'modal' }} />
         <Stack.Screen name="signup" options={{ presentation: 'modal' }} />
       </Stack>
+      <Toast/>
     </GestureHandlerRootView>
       
   );
