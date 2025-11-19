@@ -67,6 +67,7 @@ Built with a modern, responsive interface ideal for mobile shopping.
 
 ### Frontend Setup
 ```bash
+##Add Keys wherever required in the frontend folder and then follow the steps
 git clone https://github.com/YOUR_USERNAME/Styra.git
 cd SVR_Styra/frontend
 npm install
